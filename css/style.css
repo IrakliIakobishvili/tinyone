@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  outline: none;
+  font-family: "Source Sans Pro";
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #222222;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 960px;
+  margin: auto;
+}
+
+.topNav {
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  right: 0px;
+  width: 960px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topNav__menuBtn {
+  border: 0px;
+  background: transparent;
+  height: 16px;
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.topNav__menuBtn__div {
+  width: 20px;
+  height: 4px;
+  background-color: #000;
+}
+
+.topNav__logo {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  width: 200px;
+  margin: auto;
+}
+
+.topNav__logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+}
+
+.topNav__logo__link img {
+  margin-right: 10px;
+}
+
+.topNav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topNav__list__item {
+  font-size: 22px;
+  margin-left: 18px;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
+  color: #ffff;
+  font-weight: bold;
+}
+
+.page--home {
+  background-color: #fcdb00;
+}
+
+.page:nth-of-type(2) {
+  background-color: green;
+}
+
+.page:nth-of-type(3) {
+  background-color: blue;
+}
+
+.page:nth-of-type(4) {
+  background-color: orange;
+}
+
+.page:nth-of-type(5) {
+  background-color: tomato;
+}
+
+.page:nth-of-type(6) {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  /* width: 0px; */
+  /* background: transparent;  */
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

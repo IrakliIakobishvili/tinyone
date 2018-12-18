@@ -1,0 +1,43 @@
+@mixin google-font($font, $weight) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css?family=#{$font}:#{$weight});
+}
+
+@mixin el($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin mod($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+@mixin border($left,$top,$right,$bottom,$type,$color) {
+    border-left:   $left $type $color;
+    border-top:    $top $type $color;
+    border-right:  $right $type $color; 
+    border-bottom: $bottom $type $color;
+}
+
+@mixin box-sizing($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+}
+
+@mixin border-radius($radius:50%) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin background-image($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
