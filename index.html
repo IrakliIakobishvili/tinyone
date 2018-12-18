@@ -7,17 +7,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>TinyOne</title>
-    <style>
-        .container {
-            position: relative;
-            top: 0px;
-            /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
-            /* top: -100vh; */
-        }
-    </style>
 </head>
 <body>
-    <nav class="topNav">
+    <nav class="topNav" id="topNav">
         <button class="topNav__menuBtn" id="topNavBtn">
             <span class="topNav__menuBtn__line topNav__menuBtn__line--first"></span>
             <span class="topNav__menuBtn__line topNav__menuBtn__line--second"></span>
@@ -50,8 +42,13 @@
     </section><!--fullScreenMenu-->
     <div class="container pageScrollAnimation" id="container">
         <section class="page page--home">
-            <h2>Page 1 | HOME</h2>   
-            <button class="downArrow">down</button>        
+            <div class="inspirationBox">
+                <h2 class="inspirationBox__heading">Inspire your inspiration</h2>
+                <p class="inspirationBox__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.
+                     Donec rutrum sed sem quis venenatis.</p>
+                <a class="inspirationBox__link" href="#">GET START</a>
+            </div>
+            <button class="downArrow"><i class="fas fa-arrows-alt-v"></i></button>                
         </section>
         <section class="page"><h2>Page 2 | FEATURES</h2></section>
         <section class="page"><h2>Page 3 | PRICING</h2></section>

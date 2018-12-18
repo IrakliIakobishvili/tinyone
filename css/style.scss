@@ -75,7 +75,7 @@
     }
 }
 
-// ===TOGGLE CLASSES===
+// ===START TOGGLE CLASSES===
 .showFullScreenMenu {
     display: flex !important;
 }
@@ -100,7 +100,10 @@
 .pageScrollAnimation {
     @include transition(top,1s,cubic-bezier(0.5, 0, 0.5, 1));
 }
-
+.hideElementsInTopNav > *:not(.topNav__menuBtn) {
+    display: none;
+}
+// === END TOGGLE CLASSES===
 
 .fullScreenMenu {
     width: 100%;
@@ -133,22 +136,77 @@
     }
 }
 
+.container {
+    position: relative;
+    top: 0px;
+    /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
+    /* top: -100vh; */
+}
+
 .page {
     width: $page-width;
     height: $page-height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    color: #ffff;
-    font-weight: bold;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // color: #ffff;
     // @include mod(fullScreenMenu) {
     //     position: fixed;
     //     background: gray;
     //     // left: ;
     // }
     @include mod(home) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         background-color: $home-page-gb;
+        position: relative; 
+        .downArrow {
+            position: absolute;
+            bottom: 55px;
+            width: 25px;
+            height: 26px;
+            transform: rotate(180deg);
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            text-align: center;
+            font-size: 32px;
+            overflow: hidden;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            @include hover {
+                bottom: 50px;
+            }
+        }
+        .inspirationBox {
+            text-align: center;
+            @include el(heading) {
+                font-size: 48px;
+                font-weight: bold;
+            }
+            @include el(paragraph) {
+                font-size: 20px;
+                max-width: 500px;
+                margin: 20px auto 40px auto;
+            }
+            @include el(link) {
+                font-weight: bold;
+                font-size: 22px;
+                text-transform: uppercase;
+                padding: 12px 72px;
+                border: 2px solid $primary-color;
+                display: inline-block;
+                @include hover {
+                    color: $secondary-color;
+                    background-color: $primary-color;
+                    color: $home-page-gb;
+                }
+            }
+        }
     }
 }
 

@@ -140,6 +140,10 @@
   transition: top 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
+.hideElementsInTopNav > *:not(.topNav__menuBtn) {
+  display: none;
+}
+
 .fullScreenMenu {
   width: 100%;
   height: 100vh;
@@ -177,25 +181,88 @@
   border-color: #898989;
 }
 
+.container {
+  position: relative;
+  top: 0px;
+  /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
+  /* top: -100vh; */
+}
+
 .page {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 60px;
-  color: #ffff;
-  font-weight: bold;
 }
 
 .page--home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fcdb00;
+  position: relative;
+}
+
+.page--home .downArrow {
+  position: absolute;
+  bottom: 55px;
+  width: 25px;
+  height: 26px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.page--home .downArrow:hover {
+  bottom: 50px;
+}
+
+.page--home .inspirationBox {
+  text-align: center;
+}
+
+.page--home .inspirationBox__heading {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.page--home .inspirationBox__paragraph {
+  font-size: 20px;
+  max-width: 500px;
+  margin: 20px auto 40px auto;
+}
+
+.page--home .inspirationBox__link {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 12px 72px;
+  border: 2px solid #222222;
+  display: inline-block;
+}
+
+.page--home .inspirationBox__link:hover {
+  color: #898989;
+  background-color: #222222;
+  color: #fcdb00;
 }
 
 .page:nth-of-type(2) {

@@ -12,6 +12,7 @@ const Tinyone = {
     menuLinks: document.querySelectorAll('.fullScreenMenu__list__item__link'),
     activeClass: 'fullScreenMenu__list__item__link--active',
     container: document.querySelector('#container'),
+    topNav: document.querySelector('#topNav'),
     changePage: function(e) {
         Tinyone.container.classList.add('pageScrollAnimation');
         e.preventDefault();
@@ -49,11 +50,11 @@ const Tinyone = {
         }
     },
     fullScreenMenu: function() {
+        Tinyone.topNav.classList.toggle('hideElementsInTopNav');
         Tinyone.topNavBtn.classList.toggle('fullScreenBtnStyle');
         Tinyone.menuPage.classList.toggle('showFullScreenMenu');
-        // Tinyone.container.classList.add('pageScrollAnimation');
     },
-    clickingLinks: function(e) {
+    clickingLinks: function(e) {        
         Tinyone.container.classList.remove('pageScrollAnimation');
         for(let i = 0; i < Tinyone.menuLinks.length; i++) {
             Tinyone.menuLinks[i].setAttribute('data-index',i);
@@ -92,10 +93,10 @@ Tinyone.topNavBtn.addEventListener('click',Tinyone.fullScreenMenu);
 
 Tinyone.downArrow.addEventListener('click',function(){
     Tinyone.topValue += -window.innerHeight;
+    Tinyone.i++;
     Tinyone.container.style.top = `${Tinyone.topValue}px`;
 });
 
 Tinyone.menuLinks.forEach((el) => {
-    // el.classList.remove(Tinyone.activeClass);
     el.addEventListener('click',Tinyone.clickingLinks);
 });
