@@ -15,6 +15,12 @@
 	}
 }
 
+@mixin hover() {
+    &:hover {
+        @content;
+    }
+}
+
 @mixin border($left,$top,$right,$bottom,$type,$color) {
     border-left:   $left $type $color;
     border-top:    $top $type $color;
