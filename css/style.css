@@ -306,10 +306,112 @@
   color: #898989;
 }
 
+.page--pricing .pricingList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 75px;
+}
+
+.page--pricing .pricingList__item {
+  text-align: center;
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 40px;
+}
+
+.page--pricing .pricingList__item:nth-of-type(even) i {
+  color: #fff;
+  background-color: #010101;
+}
+
+.page--pricing .pricingList__item i {
+  font-size: 48px;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ebebeb;
+  color: #010101;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.page--pricing .pricingList__item__heading {
+  font-size: 24px;
+  margin: 25px 0px;
+}
+
+.page--pricing .pricingList__item__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: #898989;
+  margin-bottom: 40px;
+}
+
+.page--pricing .pricingList__item__price {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.page--pricing .pricingList__item__price:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #010101;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.page--pricing .pricingList__item__duration {
+  font-size: 16px;
+  color: #898989;
+  margin-bottom: 35px;
+}
+
+.page--pricing .pricingList__item__link {
+  font-size: 16px;
+  border: 2px solid #222222;
+  color: #222222;
+  padding: 12px 15px;
+  font-weight: 700;
+}
+
+.page--pricing .pricingList__item__link:hover {
+  color: #fff;
+  background-color: #010101;
+}
+
 .page__heading {
   text-align: center;
   font-size: 32px;
-  margin-top: 120px;
+  padding-top: 120px;
   margin-bottom: 15px;
 }
 

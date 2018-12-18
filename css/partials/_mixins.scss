@@ -47,6 +47,12 @@
     -moz-border-radius: $radius;
 }
 
+@mixin pseudo($selector) {
+    &:#{$selector} {
+        @content;
+    }
+}
+
 @mixin background-image($imgpath,$position:0 0,$repeat: no-repeat) {
     background: {
         image: url($imgpath);
