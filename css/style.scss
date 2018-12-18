@@ -43,9 +43,10 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-        @include el(div) {
+        @include el(line) {
             width: 20px;
             height: 4px;
+            display: block;
             background-color: #000;
         }
     }
@@ -73,9 +74,34 @@
         }
     }
 }
+
+// ===TOGGLE CLASSES===
 .showFullScreenMenu {
     display: flex !important;
 }
+.fullScreenBtnStyle {
+    justify-content: center;
+    position: relative;
+    .topNav__menuBtn__line {
+        background-color: $secondary-color;
+        position: absolute;
+        @include transition(transform);
+        @include mod(first) {
+            transform: rotate(45deg);
+        } 
+        @include mod(second) {
+            display: none;
+        }
+        @include mod(third) {
+            transform: rotate(-45deg);
+        }
+    }
+}
+.pageScrollAnimation {
+    @include transition(top,1s,cubic-bezier(0.5, 0, 0.5, 1));
+}
+
+
 .fullScreenMenu {
     width: 100%;
     height: 100vh;
@@ -127,8 +153,8 @@
 }
 
 ////////////////////////
-$colors: (red,green,blue,orange,tomato,black);
-@for $i from 2 through 6 {
+$colors: (red,green,blue,orange,tomato,black,purple,darkblue);
+@for $i from 2 through 8 {
     .page:nth-of-type(#{$i}) {
         background-color:nth($colors,$i);
     } 

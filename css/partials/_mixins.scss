@@ -28,6 +28,13 @@
     border-bottom: $bottom $type $color;
 }
 
+@mixin transition($property: all, $duration: .3s, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
+}
+
 @mixin box-sizing($value) {
     box-sizing: $value;
     -webkit-box-sizing: $value;

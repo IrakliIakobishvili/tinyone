@@ -55,9 +55,10 @@
   cursor: pointer;
 }
 
-.topNav__menuBtn__div {
+.topNav__menuBtn__line {
   width: 20px;
   height: 4px;
+  display: block;
   background-color: #000;
 }
 
@@ -101,6 +102,42 @@
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.fullScreenBtnStyle {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.fullScreenBtnStyle .topNav__menuBtn__line {
+  background-color: #898989;
+  position: absolute;
+  -webkit-transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.fullScreenBtnStyle .topNav__menuBtn__line--first {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.fullScreenBtnStyle .topNav__menuBtn__line--second {
+  display: none;
+}
+
+.fullScreenBtnStyle .topNav__menuBtn__line--third {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.pageScrollAnimation {
+  -webkit-transition: top 1s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: top 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .fullScreenMenu {
@@ -179,6 +216,14 @@
 
 .page:nth-of-type(6) {
   background-color: black;
+}
+
+.page:nth-of-type(7) {
+  background-color: purple;
+}
+
+.page:nth-of-type(8) {
+  background-color: darkblue;
 }
 
 ::-webkit-scrollbar {

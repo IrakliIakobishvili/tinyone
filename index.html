@@ -11,7 +11,7 @@
         .container {
             position: relative;
             top: 0px;
-            transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+            /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
             /* top: -100vh; */
         }
     </style>
@@ -19,9 +19,9 @@
 <body>
     <nav class="topNav">
         <button class="topNav__menuBtn" id="topNavBtn">
-            <div class="topNav__menuBtn__div topNav__menuBtn__div--first"></div>
-            <div class="topNav__menuBtn__div topNav__menuBtn__div--second"></div>
-            <div class="topNav__menuBtn__div topNav__menuBtn__div--third"></div>
+            <span class="topNav__menuBtn__line topNav__menuBtn__line--first"></span>
+            <span class="topNav__menuBtn__line topNav__menuBtn__line--second"></span>
+            <span class="topNav__menuBtn__line topNav__menuBtn__line--third"></span>
         </button>
         <h1 class="topNav__logo">
             <a class="topNav__logo__link" href="#">
@@ -48,15 +48,18 @@
             <li class="fullScreenMenu__list__item"><a class="fullScreenMenu__list__item__link" href="">sign up</a></li>
         </ul>
     </section><!--fullScreenMenu-->
-    <div class="container">
+    <div class="container pageScrollAnimation" id="container">
         <section class="page page--home">
+            <h2>Page 1 | HOME</h2>   
             <button class="downArrow">down</button>        
         </section>
-        <section class="page">Page 2</section>
-        <section class="page">Page 3</section>
-        <section class="page">Page 4</section>
-        <section class="page">Page 5</section>
-        <section class="page">Page 6</section>
+        <section class="page"><h2>Page 2 | FEATURES</h2></section>
+        <section class="page"><h2>Page 3 | PRICING</h2></section>
+        <section class="page"><h2>Page 4 | WORKS</h2></section>
+        <section class="page"><h2>Page 5 | TEAM</h2></section>
+        <section class="page"><h2>Page 6 | TESTIMONIAL</h2></section>
+        <section class="page"><h2>Page 7 | CONTACT</h2></section>
+        <section class="page"><h2>Page 8 | SIGN UP</h2></section>
     </div><!--container-->
 
     <script src="js/scripts.js"></script>
