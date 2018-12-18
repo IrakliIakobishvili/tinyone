@@ -146,6 +146,7 @@
 .page {
     width: $page-width;
     height: $page-height;
+    background-color: #fff;
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -164,22 +165,20 @@
         position: relative; 
         .downArrow {
             position: absolute;
-            bottom: 55px;
+            bottom: 45px;
             width: 25px;
-            height: 26px;
-            transform: rotate(180deg);
             left: 0px;
             right: 0px;
             margin: auto;
             text-align: center;
             font-size: 32px;
-            overflow: hidden;
             background: transparent;
+            padding: 3px;
             border: none;
             cursor: pointer;
             transition-duration: 0.3s;
             @include hover {
-                bottom: 50px;
+                bottom: 35px;
             }
         }
         .inspirationBox {
@@ -208,15 +207,61 @@
             }
         }
     }
+    @include mod(features) {
+        .featuresList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 90px;
+            @include el(item) {
+                max-width: 290px;
+                display: flex;
+                margin-bottom: 80px;
+                i {
+                    margin-right: 30px;
+                    font-size: 50px;
+                    width: 60px;
+                    text-align: center;
+                    display: inline-block;
+                }
+                div {
+                    width: 210px;
+                }
+                @include el(heading) {
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                    color: $primary-color;
+                }
+                @include el(description) {
+                    font-size: 16px;
+                    color: $secondary-color; 
+                }
+            }
+        }
+    }
+    @include el(heading) {
+        text-align: center;
+        font-size: 32px;
+        margin-top: 120px;
+        margin-bottom: 15px;
+    }
+    @include el(description) {
+        display: block;
+        margin: auto;
+        max-width: 720px;
+        text-align: center;
+        font-size: 20px;
+        color: $secondary-color;
+    }
 }
 
 ////////////////////////
-$colors: (red,green,blue,orange,tomato,black,purple,darkblue);
-@for $i from 2 through 8 {
-    .page:nth-of-type(#{$i}) {
-        background-color:nth($colors,$i);
-    } 
-}
+// $colors: (red,green,blue,orange,tomato,black,purple,darkblue);
+// @for $i from 2 through 8 {
+//     .page:nth-of-type(#{$i}) {
+//         background-color:nth($colors,$i);
+//     } 
+// }
 ////////////////////////
 
 
