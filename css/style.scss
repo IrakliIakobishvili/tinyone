@@ -369,6 +369,50 @@
             }
         }
     }
+    @include mod(team) {
+        .teamList {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-around;
+            @include el(item) {
+                width: 170px;
+                text-align: center;
+                @include el(name) {
+                    margin: 40px 0px 5px 0px;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: $tertiary-color;
+                }
+                @include el(profession) {
+                    font-size: 16px;
+                    color: $secondary-color;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                @include el(description) {
+                    font-size: 14px;
+                    color: #313841;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                @include el(icons) {
+                    color: $tertiary-color;
+                    font-size: 16px;
+                    a {
+                        margin: 0px 4px;
+                    }
+                    a:first-child {
+                        position: relative;
+                        top: 1px;
+                    }
+                    a:nth-child(2) {
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+        }
+    }
     @include el(heading) {
         text-align: center;
         font-size: 32px;

@@ -479,6 +479,60 @@
   display: block;
 }
 
+.page--team .teamList {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.page--team .teamList__item {
+  width: 170px;
+  text-align: center;
+}
+
+.page--team .teamList__item__name {
+  margin: 40px 0px 5px 0px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #010101;
+}
+
+.page--team .teamList__item__profession {
+  font-size: 16px;
+  color: #898989;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.page--team .teamList__item__description {
+  font-size: 14px;
+  color: #313841;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.page--team .teamList__item__icons {
+  color: #010101;
+  font-size: 16px;
+}
+
+.page--team .teamList__item__icons a {
+  margin: 0px 4px;
+}
+
+.page--team .teamList__item__icons a:first-child {
+  position: relative;
+  top: 1px;
+}
+
+.page--team .teamList__item__icons a:nth-child(2) {
+  position: relative;
+  top: 1px;
+}
+
 .page__heading {
   text-align: center;
   font-size: 32px;

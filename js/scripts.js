@@ -5,10 +5,8 @@ const Tinyone = {
     topValue: 0,
     downArrow: document.querySelector('.downArrow'),
     totalPage: document.querySelectorAll('.page'),
-
     topNavBtn: document.querySelector('#topNavBtn'),
     menuPage:  document.querySelector('#menuPage'),
-
     menuLinks: document.querySelectorAll('.fullScreenMenu__list__item__link'),
     activeClass: 'fullScreenMenu__list__item__link--active',
     container: document.querySelector('#container'),
