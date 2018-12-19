@@ -148,6 +148,14 @@
   background-color: transparent !important;
 }
 
+.white > span {
+  background-color: #fff !important;
+}
+
+.whiteIcons > li > a > i {
+  color: #fff !important;
+}
+
 .fullScreenMenu {
   width: 100%;
   height: 100vh;
@@ -715,6 +723,66 @@
   cursor: pointer;
 }
 
+.page--signup {
+  background-color: #010101;
+}
+
+.page--signup .signupForm {
+  height: 50px;
+  width: 750px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.page--signup .signupForm__email {
+  height: 100%;
+  width: 600px;
+  background-color: #fff;
+  margin-right: 5px;
+  padding: 0px 20px;
+  color: #898989;
+  font-size: 16px;
+}
+
+.page--signup .signupForm__submit {
+  height: 100%;
+  width: 140px;
+  background-color: #fff;
+  color: #222222;
+  border: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.page--signup .linksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 110px;
+  padding-right: 40px;
+}
+
+.page--signup .linksList__item {
+  max-width: 200px;
+}
+
+.page--signup .linksList__item a {
+  color: #fff;
+  display: block;
+  margin: 2px 0px;
+}
+
+.page--signup .linksList__item a:hover {
+  text-decoration: underline;
+}
+
+.page--signup .linksList__item p {
+  color: #fff;
+}
+
 .page__heading {
   text-align: center;
   font-size: 32px;
@@ -722,6 +790,10 @@
   padding-bottom: 25px;
   max-width: 400px;
   margin: auto;
+}
+
+.page__heading--contact {
+  color: #fff;
 }
 
 .page__description {

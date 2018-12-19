@@ -12,6 +12,7 @@ const Tinyone = {
     container: document.querySelector('#container'),
     topNav: document.querySelector('#topNav'),
     logo: document.querySelector('.topNav__logo'),
+    topNavList: document.querySelector('#topNavList'),
     changePage: function(e) {
         Tinyone.container.classList.add('pageScrollAnimation');
         e.preventDefault();
@@ -56,6 +57,17 @@ const Tinyone = {
                 Tinyone.logo.style.display = "block";
             },1000);
         }
+        if(Tinyone.i === Tinyone.totalPage.length-1) {
+            setTimeout(() => {
+                Tinyone.topNavBtn.classList.add('white');
+                Tinyone.topNavList.classList.add('whiteIcons');
+            },800);
+        }else {
+            setTimeout(() => {
+                Tinyone.topNavBtn.classList.remove('white');
+            Tinyone.topNavList.classList.remove('whiteIcons');
+            },200);
+        }
     },
     fullScreenMenu: function() {
         Tinyone.topNav.classList.toggle('hideElementsInTopNav');
@@ -65,6 +77,13 @@ const Tinyone = {
             Tinyone.logo.style.display = "none";
         }else {
             Tinyone.logo.style.display = "block";
+        }
+        if(Tinyone.i === Tinyone.totalPage.length-1) {
+            Tinyone.topNavBtn.classList.add('white');
+            Tinyone.topNavList.classList.add('whiteIcons');
+        }else {
+            Tinyone.topNavBtn.classList.remove('white');
+            Tinyone.topNavList.classList.remove('whiteIcons');
         }
     },
     clickingLinks: function(e) {        
