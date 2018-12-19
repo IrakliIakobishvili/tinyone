@@ -104,6 +104,10 @@
   display: flex !important;
 }
 
+.showFullScreenMenu__heading {
+  display: none;
+}
+
 .fullScreenBtnStyle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -809,5 +813,65 @@
   /* width: 0px; */
   /* background: transparent;  */
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .topNav {
+    width: 100%;
+    padding: 0px 30px;
+    background: #fcdb00;
+    top: 0px;
+    height: 60px;
+  }
+  .topNav .topNav__list {
+    display: none;
+  }
+  .topNav .topNav__logo {
+    left: auto;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  .page {
+    min-height: 100vh;
+    height: auto;
+  }
+  .signupForm {
+    width: 100% !important;
+  }
+  .signupForm input {
+    width: 100% !important;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .contactForm {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .featuresList, .pricingList, .worksList, .teamList, .testimonialList, .contactinfoList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featuresList li, .pricingList li, .worksList li, .teamList li, .testimonialList li, .contactinfoList li {
+    margin-bottom: 30px !important;
+  }
+  .feedbackList, .linksList {
+    display: none !important;
+  }
+  .contactForm {
+    width: 100% !important;
+    padding: 30px;
+  }
+  .contactForm input {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
