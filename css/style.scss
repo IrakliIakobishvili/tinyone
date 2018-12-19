@@ -103,6 +103,9 @@
 .hideElementsInTopNav > *:not(.topNav__menuBtn) {
     display: none;
 }
+.transparentBg {
+    background-color: transparent !important;
+}
 // === END TOGGLE CLASSES===
 
 .fullScreenMenu {
@@ -247,7 +250,7 @@
             @include el(item) {
                 &:nth-of-type(even) i {
                     color: #fff;
-                    background-color: $pricing-list-color;
+                    background-color: $tertiary-color;
                 }
                 text-align: center;
                 width: 170px;
@@ -286,7 +289,7 @@
                         display: block;
                         width: 50px;
                         height: 2px;
-                        background-color: $pricing-list-color;
+                        background-color: $tertiary-color;
                         position: absolute;
                         bottom: -5px;
                         left: 0px;
@@ -307,8 +310,61 @@
                     font-weight: 700;
                     @include pseudo(hover) {
                         color: #fff;
-                        background-color: $pricing-list-color;
+                        background-color: $tertiary-color;
                     }
+                }
+            }
+        }
+    }
+    @include mod(works) {
+        .worksList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            @include el(item) {
+                margin-bottom: 40px;
+                width: 220px;
+                @include el(imgCont) {                    
+                    height: 220px;
+                    position: relative;
+                    @include el(img) {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    @include el(views) {
+                        position: absolute;
+                        color: #fff;
+                        bottom: 12px;
+                        font-size: 14px;
+                        width: 60px;
+                        // background: green;
+                        left: 12px;
+                        @include background-image('../imgs/eye.png',left center);
+                        padding-left: 27px;
+                    }
+                    @include el(date) {
+                        @extend .worksList__item__imgCont__views;  
+                        left: auto;   
+                        padding-left: 0px;
+                        width: 80px;
+                        @include background-image('../imgs/clock.png',right center);
+                        padding-right: 35px;  
+                        right: 12px;                 
+                    }
+                }
+                @include el(heading) {
+                    text-align: center;
+                    font-size: 22px;
+                    color: $tertiary-color;
+                    margin: 18px 0px 5px 0px;
+                }
+                @include el(category) {
+                    text-align: center;
+                    font-size: 16px;
+                    color: $secondary-color;
+                    display: block;
                 }
             }
         }
@@ -316,8 +372,10 @@
     @include el(heading) {
         text-align: center;
         font-size: 32px;
-        padding-top: 120px;
-        margin-bottom: 15px;
+        padding-top: 40px;
+        padding-bottom: 25px;
+        max-width: 400px;
+        margin: auto;
     }
     @include el(description) {
         display: block;
