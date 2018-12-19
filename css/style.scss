@@ -491,6 +491,62 @@
             }
         }
     }
+    @include mod(contact) {
+        .contactinfoList {
+            display: flex;
+            justify-content: center;
+            margin-top: 45px;
+            @include el(item) {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 170px;
+                margin: 0px 40px;
+                i {
+                    font-size: 22px;
+                    color: $primary-color;
+                    margin-bottom: 20px;
+                }
+                @include el(heading) {
+                    font-size: 24px;
+                    color: $tertiary-color;
+                    font-weight: 400;
+                }
+                @include el(details) {
+                    font-size: 14px;
+                    color: $secondary-color;
+                }
+            }
+        }
+        .contactForm {           
+            display: block;
+            width: 480px;
+            margin: auto;
+            margin-top: 30px;
+            input, textarea {
+                width: 100%;
+                height: 50px;
+                border: 2px solid $tertiary-color;
+                margin-bottom: 22px;
+                padding: 10px;
+                font-size: 16px;
+            }
+            textarea {
+                height: 205px;
+                resize: none;
+            }
+            input[type='submit'] {
+                background: $tertiary-color;
+                color: #fff;
+                display: block;
+                width: 170px;
+                margin: auto;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
     @include el(heading) {
         text-align: center;
         font-size: 32px;

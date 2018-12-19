@@ -641,6 +641,80 @@
   color: #898989;
 }
 
+.page--contact .contactinfoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 45px;
+}
+
+.page--contact .contactinfoList__item {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  margin: 0px 40px;
+}
+
+.page--contact .contactinfoList__item i {
+  font-size: 22px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.page--contact .contactinfoList__item__heading {
+  font-size: 24px;
+  color: #010101;
+  font-weight: 400;
+}
+
+.page--contact .contactinfoList__item__details {
+  font-size: 14px;
+  color: #898989;
+}
+
+.page--contact .contactForm {
+  display: block;
+  width: 480px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.page--contact .contactForm input, .page--contact .contactForm textarea {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #010101;
+  margin-bottom: 22px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page--contact .contactForm textarea {
+  height: 205px;
+  resize: none;
+}
+
+.page--contact .contactForm input[type='submit'] {
+  background: #010101;
+  color: #fff;
+  display: block;
+  width: 170px;
+  margin: auto;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .page__heading {
   text-align: center;
   font-size: 32px;
