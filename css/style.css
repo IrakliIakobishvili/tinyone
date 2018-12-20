@@ -200,8 +200,6 @@
 .container {
   position: relative;
   top: 0px;
-  /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
-  /* top: -100vh; */
 }
 
 .page {
@@ -811,7 +809,7 @@
 
 .fullScreenMenu__heading {
   display: none;
-  /* w3 validator returns heading! */
+  /* w3 validator requires heading! */
 }
 
 ::-webkit-scrollbar {

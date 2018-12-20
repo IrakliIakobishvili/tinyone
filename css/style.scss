@@ -1,8 +1,6 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-// @include google-font('Roboto','400');
-
 @include google-font('Source+Sans+Pro', '400,700');
 
 * {
@@ -25,7 +23,6 @@
     position: fixed;
     top: 45px;
     z-index: 15;
-    // background: white;
     left: 0px;
     right: 0px;
     width: $wrapper-width;
@@ -151,8 +148,6 @@
 .container {
     position: relative;
     top: 0px;
-    /* transition: 1s cubic-bezier(0.5, 0, 0.5, 1); */
-    /* top: -100vh; */
 }
 
 .page {
@@ -339,7 +334,6 @@
                         bottom: 12px;
                         font-size: 14px;
                         width: 60px;
-                        // background: green;
                         left: 12px;
                         @include background-image('../imgs/eye.png',left center);
                         padding-left: 27px;
@@ -616,18 +610,8 @@
     }
 }
 .fullScreenMenu__heading {
-    display: none; /* w3 validator returns heading! */
+    display: none; /* w3 validator requires heading! */
 }
-
-////////////////////////
-// $colors: (red,green,blue,orange,tomato,black,purple,darkblue);
-// @for $i from 2 through 8 {
-//     .page:nth-of-type(#{$i}) {
-//         background-color:nth($colors,$i);
-//     } 
-// }
-////////////////////////
-
 
 ::-webkit-scrollbar {
     /* width: 0px; */
