@@ -709,6 +709,7 @@
     }
     .linksList {
         flex-wrap: wrap;
+        padding-right: 0px !important;
         @include el(item) {
             max-width: none !important;
             width: 50%;

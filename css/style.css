@@ -882,6 +882,7 @@
   .linksList {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding-right: 0px !important;
   }
   .linksList__item {
     max-width: none !important;
