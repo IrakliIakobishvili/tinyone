@@ -13,6 +13,7 @@ const Tinyone = {
     topNav: document.querySelector('#topNav'),
     logo: document.querySelector('.topNav__logo'),
     topNavList: document.querySelector('#topNavList'),
+    lowScreenSize: 1024,
     changePage: function(e) {
         Tinyone.container.classList.add('pageScrollAnimation');
         e.preventDefault();
@@ -102,11 +103,72 @@ const Tinyone = {
         Tinyone.topValue = Number(e.target.getAttribute('data-vh'));
         Tinyone.container.style.top = `${Tinyone.topValue}px`;
         Tinyone.fullScreenMenu();
+    },
+    clickingLinksNarrowWind: function(e){
+        Tinyone.fullScreenMenu();
+        Tinyone.menuLinks.forEach((el) => {
+            el.classList.remove(Tinyone.activeClass);
+        });
+        e.target.classList.add(Tinyone.activeClass);
+        // Tinyone.menuLinks[Tinyone.i].classList.add(Tinyone.activeClass);
+
+        e.preventDefault();
+        let clickedPage = e.target.getAttribute('data-page');
+        window.scrollTo(0,0);
+        let pageDistanceFromTop = document.querySelector(`.page--${clickedPage}`).getBoundingClientRect().top;
+        window.scrollTo(0,pageDistanceFromTop);
+    },
+    downArrowBehaviour: function(){
+        Tinyone.container.classList.add('pageScrollAnimation'); 
+        Tinyone.topValue += -window.innerHeight;
+        Tinyone.i++;
+        Tinyone.container.style.top = `${Tinyone.topValue}px`;
+        if(Tinyone.i > 0) {
+            setTimeout(() => {
+                Tinyone.logo.style.display = "none";
+            },300);
+            
+        }else {
+            setTimeout(() => {
+                Tinyone.logo.style.display = "block";
+            },1000);
+        }
+    },
+    lowResolutionStyle: function() {
+        if(window.innerWidth < Tinyone.lowScreenSize) {
+            Tinyone.container.style.top = '0px';
+            Tinyone.topValue = 0;
+            Tinyone.i = 0;
+            document.removeEventListener('wheel',Tinyone.changePage);
+            Tinyone.logo.style.display = "block";
+            Tinyone.downArrow.removeEventListener('click',Tinyone.downArrowBehaviour);
+
+            Tinyone.menuLinks.forEach((el) => {
+                el.removeEventListener('click',Tinyone.clickingLinks);
+                el.addEventListener('click',Tinyone.clickingLinksNarrowWind);
+            });
+        }else {
+            window.scrollTo(0, 0);
+            Tinyone.container.style.top = '0px';
+            Tinyone.topValue = 0;
+            Tinyone.i = 0;
+            document.addEventListener('wheel',Tinyone.changePage);
+            Tinyone.menuLinks.forEach((el) => {
+                el.removeEventListener('click',Tinyone.clickingLinksNarrowWind);
+            });
+            Tinyone.downArrow.addEventListener('click',Tinyone.downArrowBehaviour);
+            
+            Tinyone.menuLinks.forEach((el) => {
+                el.addEventListener('click',Tinyone.clickingLinks);
+            });
+
+            Tinyone.menuLinks.forEach((el) => {
+                el.classList.remove(Tinyone.activeClass);
+            });
+            Tinyone.menuLinks[Tinyone.i].classList.add(Tinyone.activeClass);
+        }
     }
 }
-
-
-document.addEventListener('wheel',Tinyone.changePage);
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -118,26 +180,11 @@ document.addEventListener('keydown',function(e){
     }
 });
 
-
 Tinyone.topNavBtn.addEventListener('click',Tinyone.fullScreenMenu);
-
-Tinyone.downArrow.addEventListener('click',function(){
-    Tinyone.container.classList.add('pageScrollAnimation'); 
-    Tinyone.topValue += -window.innerHeight;
-    Tinyone.i++;
-    Tinyone.container.style.top = `${Tinyone.topValue}px`;
-    if(Tinyone.i > 0) {
-        setTimeout(() => {
-            Tinyone.logo.style.display = "none";
-        },300);
-        
-    }else {
-        setTimeout(() => {
-            Tinyone.logo.style.display = "block";
-        },1000);
-    }
-});
 
 Tinyone.menuLinks.forEach((el) => {
     el.addEventListener('click',Tinyone.clickingLinks);
 });
+
+window.addEventListener('load',Tinyone.lowResolutionStyle);
+window.addEventListener('resize',Tinyone.lowResolutionStyle);

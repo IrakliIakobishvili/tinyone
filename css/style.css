@@ -809,6 +809,11 @@
   color: #898989;
 }
 
+.fullScreenMenu__heading {
+  display: none;
+  /* w3 validator returns heading! */
+}
+
 ::-webkit-scrollbar {
   /* width: 0px; */
   /* background: transparent;  */
@@ -837,6 +842,19 @@
     min-height: 100vh;
     height: auto;
   }
+  .page__heading {
+    padding-top: 70px;
+  }
+  .page__description {
+    margin-bottom: 100px;
+  }
+  .featuresList__item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: none !important;
+    width: 50%;
+  }
   .signupForm {
     width: 100% !important;
   }
@@ -848,10 +866,31 @@
   .contactForm {
     margin-bottom: 30px !important;
   }
-}
-
-@media (max-width: 680px) {
-  .featuresList, .pricingList, .worksList, .teamList, .testimonialList, .contactinfoList {
+  .fullScreenMenu {
+    background-color: #010101;
+  }
+  .fullScreenMenu__list {
+    width: 80%;
+  }
+  .fullScreenMenu__list__item__link {
+    font-size: 30px;
+    padding: 5px 0px;
+  }
+  .downArrow {
+    display: none;
+  }
+  .linksList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .linksList__item {
+    max-width: none !important;
+    width: 50%;
+    text-align: center;
+    margin: 25px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -860,10 +899,35 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .featuresList li, .pricingList li, .worksList li, .teamList li, .testimonialList li, .contactinfoList li {
-    margin-bottom: 30px !important;
+  .linksList__item:first-child {
+    display: none;
   }
-  .feedbackList, .linksList {
+}
+
+@media (max-width: 680px) {
+  .featuresList,
+  .pricingList,
+  .worksList,
+  .teamList,
+  .testimonialList,
+  .contactinfoList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featuresList li,
+  .pricingList li,
+  .worksList li,
+  .teamList li,
+  .testimonialList li,
+  .contactinfoList li {
+    margin-bottom: 50px !important;
+  }
+  .feedbackList {
     display: none !important;
   }
   .contactForm {

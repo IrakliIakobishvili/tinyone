@@ -615,6 +615,9 @@
         color: $secondary-color;
     }
 }
+.fullScreenMenu__heading {
+    display: none; /* w3 validator returns heading! */
+}
 
 ////////////////////////
 // $colors: (red,green,blue,orange,tomato,black,purple,darkblue);
@@ -668,6 +671,17 @@
     .page {
         min-height: 100vh;
         height: auto;
+        @include el(heading) {
+            padding-top: 70px;
+        }
+        @include el(description) {
+            margin-bottom:100px;
+        }
+    }
+    .featuresList__item {
+        justify-content: center;
+        max-width: none !important;
+        width: 50%;
     }
     .signupForm {
         width: 100% !important;
@@ -680,16 +694,49 @@
     .contactForm {
         margin-bottom: 30px !important;
     }
+    .fullScreenMenu {
+        background-color: $tertiary-color;
+    }
+    .fullScreenMenu__list {
+        width: 80%;
+        @include el(item__link) {
+            font-size: 30px;
+            padding: 5px 0px;
+        }
+    }
+    .downArrow {
+        display: none;
+    }
+    .linksList {
+        flex-wrap: wrap;
+        @include el(item) {
+            max-width: none !important;
+            width: 50%;
+            text-align: center;
+            margin: 25px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include pseudo(first-child) {
+                display: none;
+            }
+        }
+    }
 }
 @media (max-width: 680px) {
-    .featuresList, .pricingList, .worksList, .teamList, .testimonialList, .contactinfoList {
+    .featuresList, 
+    .pricingList, 
+    .worksList, 
+    .teamList, 
+    .testimonialList, 
+    .contactinfoList {
         flex-direction: column;
         align-items: center;
         li {
-            margin-bottom: 30px !important;
+            margin-bottom: 50px !important;
         }
     }
-    .feedbackList, .linksList {
+    .feedbackList {
         display: none !important;
     }
     .contactForm {
