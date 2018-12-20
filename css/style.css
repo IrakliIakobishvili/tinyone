@@ -905,7 +905,6 @@
 }
 
 @media (max-width: 680px) {
-  .featuresList,
   .pricingList,
   .worksList,
   .teamList,
@@ -919,13 +918,31 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .featuresList li,
   .pricingList li,
   .worksList li,
   .teamList li,
   .testimonialList li,
   .contactinfoList li {
     margin-bottom: 50px !important;
+  }
+  .featuresList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featuresList__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px;
   }
   .feedbackList {
     display: none !important;

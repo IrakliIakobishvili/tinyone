@@ -724,7 +724,6 @@
     }
 }
 @media (max-width: 680px) {
-    .featuresList, 
     .pricingList, 
     .worksList, 
     .teamList, 
@@ -734,6 +733,15 @@
         align-items: center;
         li {
             margin-bottom: 50px !important;
+        }
+    }
+    .featuresList {
+        flex-direction: column;
+        align-items: center;
+        @include el(item) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
         }
     }
     .feedbackList {
